@@ -12,7 +12,7 @@ groupadd GRP_ADM
 groupadd GRP_VEN
 groupadd GRP_SEC
 
-echo "Criando usuários e determinando e os adicionando em seus grupos"
+echo "Criando usuários e os adicionando em seus grupos..."
 useradd carlos -m -s /bin/bash -p $(mkpasswd -m sha-512 Senha123) -G GRP_ADM
 useradd maria -m -s /bin/bash -p $(mkpasswd -m sha-512 Senha123) -G GRP_ADM
 useradd joao -m -s /bin/bash -p $(mkpasswd -m sha-512 Senha123) -G GRP_ADM
@@ -27,7 +27,7 @@ useradd rogerio -m -s /bin/bash -p $(mkpasswd -m sha-512 Senha123) -G GRP_SEC
 
 echo "Usuários criados com Sucesso!"
 
-echo "Configurando permissões do ususário..."
+echo "Configurando permissões do usuário..."
 chown root:GRP_ADM /adm
 chown root:GRP_VEN /ven
 chown root:GRP_SEC /sec
